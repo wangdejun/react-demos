@@ -8,13 +8,26 @@
   <body>
     <div id="example"></div>
     <script type="text/babel">
-      var names = ['Alice', 'Emily', 'Kate'];
+      var names = [
+        {'name0':'Alice'}, 
+        {'name1':'Emily'}, 
+        {'name2':'Kate'},
+        {'name3':'wangdejun'},
+        {'name4':['dejun','wang']}
+        ];
+
+      var product = names.name4
 
       ReactDOM.render(
         <div>
         {
-          names.map(function (name) {
-            return <div>Hello, {name}!</div>
+          names.map((name)=>{
+            return <div>Hello, {name.name4} !{}</div>
+          })
+        }
+        {
+          product.map((prd)=>{
+            return <div>Hello, {prd} !</div>
           })
         }
         </div>,

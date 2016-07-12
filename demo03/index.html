@@ -12,6 +12,12 @@
         <h1>Hello world!</h1>,
         <h2>React is awesome</h2>,
       ];
+
+        arr.push(<h1>Hello,The World!</h1>);
+        arr.shift(<h1>Hello world!</h1>);
+        arr.shift(<h2>React is awesome</h2>)
+
+
       ReactDOM.render(
         <div>{arr}</div>,
         document.getElementById('example')

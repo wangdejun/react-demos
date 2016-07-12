@@ -8,6 +8,12 @@
   <body>
     <div id="example"></div>
     <script type="text/babel">
+
+
+
+
+
+
 var LikeButton = React.createClass({
   getInitialState: function() {
     return {liked: false};
@@ -17,8 +23,12 @@ var LikeButton = React.createClass({
   },
   render: function() {
     var text = this.state.liked ? 'like' : 'haven\'t liked';
+    var likestyle = {background:"#ff0"}
+    var unlikestyle = {background:"#0f0"}
+    var style = this.state.liked ? likestyle : unlikestyle
+    
     return (
-      <p onClick={this.handleClick}>
+      <p onClick={this.handleClick} style = {style}>
         You {text} this. Click to toggle.
       </p>
     );

@@ -13,7 +13,7 @@
           return (
             <ol>
               {
-                React.Children.map(this.props.children, function (child) {
+                React.Children.map(this.props.children,(child)=>{
                   return <li>{child}</li>;
                 })
               }
@@ -24,8 +24,9 @@
 
       ReactDOM.render(
         <NotesList>
-          <span>hello</span>
-          <span>world</span>
+          <span>hello Hell</span>
+          <span>world Hello</span>
+          <span>world Hello</span>
         </NotesList>,
         document.getElementById('example')
       );

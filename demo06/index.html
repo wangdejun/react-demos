@@ -13,16 +13,21 @@
 
       var MyTitle = React.createClass({
         propTypes: {
-          title: React.PropTypes.string.isRequired,
+          title: React.PropTypes.number.isRequired,
+        },
+        getDefaultProps:()=>{
+          return {
+            title:"Hello,World!"
+          }
         },
 
-        render: function() {
+        render:function(){
           return <h1> {this.props.title} </h1>;
         }
       });
 
       ReactDOM.render(
-        <MyTitle title={data} />,
+        <MyTitle />,
         document.getElementById('example')
       );
 
